@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home - {{username}}
+{% endblock %}
+
+{% block content %}
+
+<div class="flex-container">
+
+    <div class="flex-child">
+        <!-- Form to select type of pet to buy -->
+        <form action="{{url_for('view.buy_pet')}}" method="POST">
+            <input type="hidden" id="username" name="username" value="{{username}}">
+            <h2>Please select a pet to buy:</h2>
+            <input type="radio" id="dog" name="pet" value="dog">
+            <label for="dog">Dog</label><br>
+            <input type="radio" id="cat" name="pet" value="cat">
+            <label for="cat">Cat</label><br><br>
+            <input type="submit" value="Buy">
+        </form>
+    </div>
+
+    <div class="flex-child">
+        <h2>Pets Owned:</h2>
+        <!-- Display list of pets owned by the current user in an ordered list -->
+        <ol>
+            {% for pet in pets %}
+            <li>{{pet.type}} : {{pet.serial_number}} ( {{pet.sound}} )</li>
+            {% endfor %}
+        </ol>
+    </div>
+</div>
+{% endblock %}
