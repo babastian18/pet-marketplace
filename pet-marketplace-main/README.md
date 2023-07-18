@@ -44,7 +44,7 @@ Please, follow these steps to successfully run this application on your local ma
 
 7. Now the flask application setup is complete, to run it application using development server, type:
 
-      `flask --app core run -h localhost -p 3000`
+      `flask --app core run -h localhost -p 8005`
       
     This command runs the core application package at <b>localhost:3000</b>. 
     
