@@ -46,9 +46,9 @@ Please, follow these steps to successfully run this application on your local ma
 
       `flask --app core run -h localhost -p 8005`
       
-    This command runs the core application package at <b>localhost:3000</b>. 
+    This command runs the core application package at <b>localhost:8005</b>. 
     
-Now you can go to the browser, and enter <b>http://localhost:3000/</b> to start playing with this application :smile:
+Now you can go to the browser, and enter <b>http://localhost:8005/</b> to start playing with this application :smile:
 
 ## Why Python ?
 
